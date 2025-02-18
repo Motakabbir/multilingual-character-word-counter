@@ -1,0 +1,9 @@
+{
+    "title": "Multilingual Character & Word Counter",
+    "placeholder": "Enter or paste your text here...",
+    "characters": "Characters",
+    "words": "Words",
+    "lines": "Lines",
+    "copy": "Copy Text",
+    "export": "Export Stats"
+  }

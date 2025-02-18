@@ -1,0 +1,9 @@
+{
+    "title": "多语言字符和词计数器",
+    "placeholder": "在此输入或粘贴文本...",
+    "characters": "字符",
+    "words": "词",
+    "lines": "行",
+    "copy": "复制文本",
+    "export": "导出统计"
+}

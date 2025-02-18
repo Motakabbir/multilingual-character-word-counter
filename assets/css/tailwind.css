@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-container {
+  @apply mx-44 sm:mx-7 md:mx-24 lg:mx-44 my-0 py-20;
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+.p-menubar {
+  @apply border-t-0 border-l-0  bg-gray-100 !important;
+}
+
+/* scrollbar design */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ebebeb;
+}
+
+/* Start Horizontal Schroll */
+
+::-webkit-scrollbar-track:horizontal {
+  background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #ebebeb;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
