@@ -1,9 +1,12 @@
 {
-    "title": "Multilingual Character & Word Counter",
-    "placeholder": "Enter or paste your text here...",
-    "characters": "Characters",
-    "words": "Words",
-    "lines": "Lines",
-    "copy": "Copy Text",
-    "export": "Export Stats"
-  }
+  "title": "Multilingual Character & Word Counter",
+  "placeholder": "Enter or paste your text here...",
+  "characters": "Characters",
+  "words": "Words",
+  "lines": "Lines",
+  "copy": "Copy Text",
+  "export": "Export Stats",
+  "copied": "Text copied to clipboard!",
+  "exportSuccess": "Stats exported successfully!",
+  "error": "An error occurred"
+}

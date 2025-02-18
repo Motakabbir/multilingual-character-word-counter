@@ -69,7 +69,7 @@
 import { useCounterStore } from '~/stores/counter'
 
 const counter = useCounterStore()
-const { t } = useI18n()
+const { t,locale, availableLocales  } = useI18n()
 
 const text = ref('')
 const stats = computed(() => counter.stats)

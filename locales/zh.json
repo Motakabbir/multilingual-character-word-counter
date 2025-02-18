@@ -2,8 +2,11 @@
     "title": "多语言字符和词计数器",
     "placeholder": "在此输入或粘贴文本...",
     "characters": "字符",
-    "words": "词",
-    "lines": "行",
+    "words": "词数",
+    "lines": "行数",
     "copy": "复制文本",
-    "export": "导出统计"
-}
+    "export": "导出统计",
+    "copied": "文本已复制到剪贴板！",
+    "exportSuccess": "统计数据导出成功！",
+    "error": "发生错误"
+  }
