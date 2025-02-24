@@ -1,12 +1,141 @@
 {
-    "title": "多语言字符和词计数器",
-    "placeholder": "在此输入或粘贴文本...",
-    "characters": "字符",
-    "words": "词数",
-    "lines": "行数",
+  "title": "多语言字符和词数统计器",
+  "placeholder": "在此输入或粘贴您的文本...",
+  "characters": "字符",
+  "words": "词数",
+  "lines": "行数",
+  "copy": "复制文本",
+  "export": "导出统计",
+  "copied": "文本已复制到剪贴板！",
+  "exportSuccess": "统计数据导出成功！",
+  "error": "发生错误",
+  "meta": {
+    "home": {
+      "title": "多语言字符和词数统计",
+      "description": "免费在线工具，支持英文、中文、孟加拉语和印地语等多种语言的字符、词数和行数统计。提供实时计数和多语言支持。"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "terms": "条款",
+    "privacy": "隐私",
+    "menu": "菜单",
+    "toggleMenu": "切换导航菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "footer": {
+    "about": {
+      "title": "关于我们",
+      "description": "我们提供一个简单但强大的工具，用于多种语言的字符和词数统计。"
+    },
+    "links": {
+      "title": "快速链接"
+    },
+    "connect": {
+      "title": "联系我们"
+    },
+    "copyright": "© {year} 字符和词数统计器。保留所有权利。"
+  },
+  "about": {
+    "title": "关于字符和词数统计器",
+    "description": "了解我们的多语言文本分析工具及其功能",
+    "mission": {
+      "title": "我们的使命",
+      "content": "提供一个可靠、快速且易于使用的工具，用于多种语言的字符和词数统计，使文本分析对每个人都可访问。"
+    },
+    "features": {
+      "title": "主要功能",
+      "realtime": "实时字符和词数统计",
+      "multilingual": "支持包括英文、中文、孟加拉语和印地语在内的多种语言",
+      "offline": "离线工作 - 不在服务器上存储数据",
+      "export": "支持多种格式导出统计数据",
+      "darkMode": "支持明暗模式切换"
+    },
+    "languages": {
+      "title": "支持的语言"
+    }
+  },
+  "terms": {
+    "title": "使用条款",
+    "description": "我们的字符和词数统计工具使用条款",
+    "usage": {
+      "title": "使用条款",
+      "content": "使用我们的服务即表示您同意这些条款和条件。",
+      "items": {
+        "responsible": "负责任且合法地使用服务",
+        "lawful": "仅提交您有权使用的内容",
+        "noHarm": "不得使用服务造成伤害或损害"
+      }
+    },
+    "privacy": {
+      "title": "隐私",
+      "content": "我们不存储您输入的任何文本。所有处理都在您的浏览器中本地完成。"
+    },
+    "intellectual": {
+      "title": "知识产权",
+      "content": "本服务，包括其代码和设计，受知识产权保护。"
+    },
+    "disclaimer": {
+      "title": "免责声明",
+      "content": "本服务按\"原样\"提供，不提供任何保证。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "content": "如果您对这些条款有任何问题，请联系我们："
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "description": "我们的隐私政策说明我们如何处理您的数据",
+    "collection": {
+      "title": "数据收集",
+      "content": "我们优先考虑您的隐私，并保持数据处理的透明度。",
+      "items": {
+        "noStorage": "我们不存储您输入的任何文本",
+        "browser": "所有处理都在您的浏览器中进行",
+        "cookies": "我们仅使用基本功能所需的最少cookie"
+      }
+    },
+    "usage": {
+      "title": "数据使用",
+      "content": "您的文本仅用于统计字符和词数。我们不分析、存储或共享您的内容。"
+    },
+    "security": {
+      "title": "安全性",
+      "content": "我们严肃对待安全性，并采取措施保护您的隐私。",
+      "items": {
+        "encryption": "所有连接都使用HTTPS加密",
+        "protection": "本地处理确保您的文本永远不会离开您的设备"
+      }
+    },
+    "changes": {
+      "title": "政策变更",
+      "content": "我们可能会不时更新此隐私政策。请定期查看更新。"
+    },
+    "contact": {
+      "title": "联系信息",
+      "content": "关于隐私相关的询问，请联系我们："
+    }
+  },
+  "darkMode": {
+    "toggleLight": "切换到浅色模式",
+    "toggleDark": "切换到深色模式"
+  },
+  "shortcuts": {
+    "title": "键盘快捷键",
+    "toggle": "切换快捷键帮助",
     "copy": "复制文本",
     "export": "导出统计",
-    "copied": "文本已复制到剪贴板！",
-    "exportSuccess": "统计数据导出成功！",
-    "error": "发生错误"
-  }
+    "clear": "清除文本",
+    "help": "显示键盘快捷键",
+    "nav": {
+      "home": "转到首页",
+      "about": "转到关于",
+      "terms": "转到条款",
+      "privacy": "转到隐私"
+    }
+  },
+  "clear": "清除文本",
+  "scrollToTop": "滚动到顶部"
+}

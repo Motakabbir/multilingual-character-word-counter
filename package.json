@@ -9,7 +9,9 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "@nuxtjs/i18n": "^9.0.0-rc.2",
+    "@nuxtjs/sitemap": "^7.2.6",
     "@pinia/nuxt": "^0.5.5",
     "pinia": "^2.3.1"
   },

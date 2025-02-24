@@ -8,5 +8,134 @@
   "export": "Export Stats",
   "copied": "Text copied to clipboard!",
   "exportSuccess": "Stats exported successfully!",
-  "error": "An error occurred"
+  "error": "An error occurred",
+  "meta": {
+    "home": {
+      "title": "Count Characters and Words in Multiple Languages",
+      "description": "Free online tool to count characters, words, and lines in multiple languages including English, Bengali, Hindi, and Chinese. Real-time counting with multilingual support."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "menu": "Menu",
+    "toggleMenu": "Toggle navigation menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "about": {
+      "title": "About Us",
+      "description": "We provide a simple yet powerful tool for counting characters and words across multiple languages. Our mission is to make text analysis accessible to everyone."
+    },
+    "links": {
+      "title": "Quick Links"
+    },
+    "connect": {
+      "title": "Connect With Us"
+    },
+    "copyright": "© {year} Character & Word Counter. All rights reserved."
+  },
+  "about": {
+    "title": "About Character & Word Counter",
+    "description": "Learn about our multilingual text analysis tool and its features",
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide a reliable, fast, and easy-to-use tool for counting characters and words across multiple languages, making text analysis accessible to everyone."
+    },
+    "features": {
+      "title": "Key Features",
+      "realtime": "Real-time character and word counting",
+      "multilingual": "Support for multiple languages including English, Bengali, Hindi, and Chinese",
+      "offline": "Works offline - no data stored on servers",
+      "export": "Export statistics in various formats",
+      "darkMode": "Light and dark mode support"
+    },
+    "languages": {
+      "title": "Supported Languages"
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "description": "Terms and conditions for using our character and word counter tool",
+    "usage": {
+      "title": "Usage Terms",
+      "content": "By using our service, you agree to these terms and conditions.",
+      "items": {
+        "responsible": "Use the service responsibly and legally",
+        "lawful": "Only submit content you have the right to use",
+        "noHarm": "Do not use the service to cause harm or damage"
+      }
+    },
+    "privacy": {
+      "title": "Privacy",
+      "content": "We respect your privacy and do not store any text you enter. All processing is done locally in your browser."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "The service, including its code and design, is protected by intellectual property rights."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": "The service is provided 'as is' without any warranties."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about these terms, please contact us at:"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Our privacy policy explains how we handle your data",
+    "collection": {
+      "title": "Data Collection",
+      "content": "We prioritize your privacy and maintain transparency about our data practices.",
+      "items": {
+        "noStorage": "We do not store any text you enter",
+        "browser": "All processing happens in your browser",
+        "cookies": "We use minimal cookies for essential functionality"
+      }
+    },
+    "usage": {
+      "title": "Data Usage",
+      "content": "Your text is only used for counting characters and words. We do not analyze, store, or share your content."
+    },
+    "security": {
+      "title": "Security",
+      "content": "We take security seriously and implement measures to protect your privacy.",
+      "items": {
+        "encryption": "All connections are encrypted using HTTPS",
+        "protection": "Local processing ensures your text never leaves your device"
+      }
+    },
+    "changes": {
+      "title": "Policy Changes",
+      "content": "We may update this privacy policy from time to time. Check back regularly for updates."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "For privacy-related inquiries, contact us at:"
+    }
+  },
+  "darkMode": {
+    "toggleLight": "Switch to light mode",
+    "toggleDark": "Switch to dark mode"
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "toggle": "Toggle shortcuts help",
+    "copy": "Copy text",
+    "export": "Export statistics",
+    "clear": "Clear text",
+    "help": "Show keyboard shortcuts",
+    "nav": {
+      "home": "Go to Home",
+      "about": "Go to About",
+      "terms": "Go to Terms",
+      "privacy": "Go to Privacy"
+    }
+  },
+  "clear": "Clear text",
+  "scrollToTop": "Scroll to top"
 }

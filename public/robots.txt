@@ -1,1 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Common files and directories
+Disallow: /api/
+Disallow: /.git/
+Disallow: /.nuxt/
+Disallow: /.output/
+Disallow: /node_modules/
 
