@@ -4,9 +4,11 @@
   "characters": "Characters",
   "words": "Words",
   "lines": "Lines",
+  "paragraphs": "Paragraphs",
   "copy": "Copy Text",
   "export": "Export Stats",
-  "copied": "Text copied to clipboard!",
+  "copyToClipboard": "Click to copy to clipboard",
+  "copied": "Copied to clipboard!",
   "exportSuccess": "Stats exported successfully!",
   "error": "An error occurred",
   "meta": {
@@ -129,6 +131,9 @@
     "export": "Export statistics",
     "clear": "Clear text",
     "help": "Show keyboard shortcuts",
+    "toggleAlphabets": "Toggle alphabet frequency",
+    "toggleNumbers": "Toggle number frequency",
+    "toggleSpecialChars": "Toggle special characters",
     "nav": {
       "home": "Go to Home",
       "about": "Go to About",
@@ -137,5 +142,10 @@
     }
   },
   "clear": "Clear text",
-  "scrollToTop": "Scroll to top"
+  "scrollToTop": "Scroll to top",
+  "stats": {
+    "alphabets": "Letter Frequency",
+    "numbers": "Number Frequency",
+    "specialChars": "Special Character Frequency"
+  }
 }

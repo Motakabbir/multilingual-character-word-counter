@@ -54,15 +54,74 @@
       </div>
 
       <!-- Statistics -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 stagger-fade">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 stagger-fade">
         <StatCard 
           v-for="(stat, type) in stats"
           :key="type"
           :title="t(type)"
           :value="stat"
-          :icon="type === 'characters' ? 'char' : type === 'words' ? 'word' : 'line'"
+          :icon="getStatIcon(type)"
           class="fade-in-section"
         />
+      </div>
+
+      <!-- Character Statistics Sections -->
+      <div class="space-y-4">
+        <!-- Alphabet Statistics -->
+        <div v-if="Object.keys(counter.stats.alphabets).length > 0 && showAlphabets" 
+             class="fade-in-section"
+             role="region"
+             :aria-label="t('stats.alphabets')">
+          <div class="flex justify-between items-center">
+            <AlphabetStats :alphabets="counter.stats.alphabets" />
+            <button
+              @click="toggleAlphabetStats"
+              class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 
+                     hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors tooltip-trigger"
+              :title="t('shortcuts.toggleAlphabets')"
+            >
+              <XMarkIcon class="h-5 w-5" />
+            </button>
+          </div>
+          <div class="h-px bg-gray-200 dark:bg-gray-700 my-6"></div>
+        </div>
+
+        <!-- Number Statistics -->
+        <div v-if="Object.keys(counter.stats.numbers).length > 0 && showNumbers" 
+             class="fade-in-section"
+             role="region"
+             :aria-label="t('stats.numbers')">
+          <div class="flex justify-between items-center">
+            <NumberStats :numbers="counter.stats.numbers" />
+            <button
+              @click="toggleNumberStats"
+              class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 
+                     hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors tooltip-trigger"
+              :title="t('shortcuts.toggleNumbers')"
+            >
+              <XMarkIcon class="h-5 w-5" />
+            </button>
+          </div>
+          <div class="h-px bg-gray-200 dark:bg-gray-700 my-6"></div>
+        </div>
+
+        <!-- Special Character Statistics -->
+        <div v-if="Object.keys(counter.stats.specialChars).length > 0 && showSpecialChars" 
+             class="fade-in-section"
+             role="region"
+             :aria-label="t('stats.specialChars')">
+          <div class="flex justify-between items-center">
+            <SpecialCharStats :specialChars="counter.stats.specialChars" />
+            <button
+              @click="toggleSpecialCharStats"
+              class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 
+                     hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors tooltip-trigger"
+              :title="t('shortcuts.toggleSpecialChars')"
+            >
+              <XMarkIcon class="h-5 w-5" />
+            </button>
+          </div>
+        </div>
       </div>
 
       <!-- Actions -->
@@ -96,6 +155,8 @@ import {
   CommandLineIcon 
 } from '@heroicons/vue/24/outline'
 import { useCounterStore } from '~/stores/counter'
+import NumberStats from '~/components/NumberStats.vue'
+import SpecialCharStats from '~/components/SpecialCharStats.vue'
 
 const counter = useCounterStore()
 const { t } = useI18n()
@@ -108,7 +169,8 @@ const isProcessing = ref(false)
 const stats = reactive({
   characters: 0,
   words: 0,
-  lines: 0
+  lines: 0,
+  paragraphs: 0
 })
 
 const showShortcuts = ref(false)
@@ -149,6 +211,22 @@ const updateStats = () => {
   stats.characters = counter.stats.characters
   stats.words = counter.stats.words
   stats.lines = counter.stats.lines
+  stats.paragraphs = counter.stats.paragraphs
+}
+
+const getStatIcon = (type: string) => {
+  switch (type) {
+    case 'characters':
+      return 'char'
+    case 'words':
+      return 'word'
+    case 'lines':
+      return 'line'
+    case 'paragraphs':
+      return 'para'
+    default:
+      return 'char'
+  }
 }
 
 const copyText = async () => {
@@ -164,7 +242,12 @@ const exportStats = () => {
   try {
     const data = {
       text: text.value,
-      stats: { ...stats },
+      stats: {
+        ...stats,
+        alphabets: counter.stats.alphabets,
+        numbers: counter.stats.numbers,
+        specialChars: counter.stats.specialChars
+      },
       timestamp: new Date().toISOString()
     }
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
@@ -180,6 +263,22 @@ const exportStats = () => {
   } catch (error) {
     showToast(t('error'), 'error')
   }
+}
+
+const showAlphabets = ref(true)
+const showNumbers = ref(true)
+const showSpecialChars = ref(true)
+
+const toggleAlphabetStats = () => {
+  showAlphabets.value = !showAlphabets.value
+}
+
+const toggleNumberStats = () => {
+  showNumbers.value = !showNumbers.value
+}
+
+const toggleSpecialCharStats = () => {
+  showSpecialChars.value = !showSpecialChars.value
 }
 
 // Register keyboard shortcuts
@@ -209,6 +308,30 @@ onMounted(() => {
     key: '?',
     action: toggleShortcuts,
     description: 'shortcuts.help'
+  })
+
+  registerShortcut({
+    key: 'a',
+    ctrl: true,
+    shift: true,
+    action: toggleAlphabetStats,
+    description: 'shortcuts.toggleAlphabets'
+  })
+
+  registerShortcut({
+    key: 'n',
+    ctrl: true,
+    shift: true,
+    action: toggleNumberStats,
+    description: 'shortcuts.toggleNumbers'
+  })
+
+  registerShortcut({
+    key: 's',
+    ctrl: true,
+    shift: true,
+    action: toggleSpecialCharStats,
+    description: 'shortcuts.toggleSpecialChars'
   })
 })
 

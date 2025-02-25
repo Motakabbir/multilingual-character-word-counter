@@ -7,6 +7,10 @@ interface CounterState {
     characters: number
     words: number
     lines: number
+    paragraphs: number
+    alphabets: { [key: string]: number }
+    numbers: { [key: string]: number }
+    specialChars: { [key: string]: number }
   }
 }
 
@@ -17,7 +21,11 @@ export const useCounterStore = defineStore('counter', {
     stats: {
       characters: 0,
       words: 0,
-      lines: 0
+      lines: 0,
+      paragraphs: 0,
+      alphabets: {},
+      numbers: {},
+      specialChars: {}
     }
   }),
   
@@ -30,6 +38,28 @@ export const useCounterStore = defineStore('counter', {
     calculateStats() {
       this.stats.characters = this.text.length
       this.stats.lines = this.text.split('\n').length
+      this.stats.paragraphs = this.text.split(/\n\s*\n/).filter(Boolean).length
+      
+      // Reset all character counts
+      this.stats.alphabets = {}
+      this.stats.numbers = {}
+      this.stats.specialChars = {}
+      
+      // Count all character types
+      const chars = [...this.text]
+      chars.forEach(char => {
+        if (/[A-Za-z]/.test(char)) {
+          // Letters
+          const lowerChar = char.toLowerCase()
+          this.stats.alphabets[lowerChar] = (this.stats.alphabets[lowerChar] || 0) + 1
+        } else if (/[0-9]/.test(char)) {
+          // Numbers
+          this.stats.numbers[char] = (this.stats.numbers[char] || 0) + 1
+        } else if (!/\s/.test(char)) {
+          // Special characters (excluding whitespace)
+          this.stats.specialChars[char] = (this.stats.specialChars[char] || 0) + 1
+        }
+      })
       
       // Handle word counting based on language
       switch(this.language) {
