@@ -1,10 +1,10 @@
 <template>
-  <header class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow sticky top-0 z-50">
+  <header class="bg-gradient-to-r from-primary to-blue-600 dark:from-blue-400 dark:to-primary backdrop-blur-sm shadow sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
         <NuxtLink to="/" class="flex items-center space-x-2 group">
-          <DocumentTextIcon class="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
-          <span class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-blue-400 dark:to-primary">
+          <DocumentTextIcon class="h-8 w-8 text-white group-hover:scale-110 transition-transform" />
+          <span class="text-xl font-bold text-white">
             {{ t('title') }}
           </span>
         </NuxtLink>
@@ -15,22 +15,22 @@
             v-for="item in navigationItems" 
             :key="item.path"
             :to="item.path"
-            class="flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 relative"
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 relative"
             :class="[
               route.path === item.path 
-                ? 'text-primary dark:text-primary font-medium' 
-                : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                ? 'text-white font-medium ' 
+                : 'text-gray-100 hover:text-white'
             ]"
           >
             <component 
               :is="item.icon" 
-              class="h-5 w-5 transition-transform group-hover:scale-110"
-              :class="route.path === item.path ? 'text-primary' : ''"
+              class="h-5 w-5"
+              :class="route.path === item.path ? 'text-white' : ''"
             />
             <span>{{ t(item.label) }}</span>
             <div
               v-if="route.path === item.path"
-              class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-blue-600 dark:from-blue-400 dark:to-primary rounded-full animate-slide-in"
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-white rounded-full animate-slide-in"
             />
           </NuxtLink>
         </div>

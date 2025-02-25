@@ -14,7 +14,7 @@
     <Transition name="fade">
       <div 
         v-if="isMenuOpen"
-        class="fixed inset-0 z-40 bg-gray-800/50 dark:bg-black/50 backdrop-blur-sm"
+        class="fixed inset-0 z-40 bg-black/70 dark:bg-black/80 backdrop-blur-md"
         @click="closeMenu"
       ></div>
     </Transition>
@@ -23,7 +23,7 @@
     <Transition name="slide">
       <div
         v-if="isMenuOpen"
-        class="fixed right-0 top-0 z-50 h-full w-72 bg-white dark:bg-gray-800 shadow-lg"
+        class="fixed right-0 top-0 z-50 h-full w-72 bg-white/95 dark:bg-gray-800/95 shadow-xl backdrop-blur-sm"
       >
         <div class="p-6">
           <div class="flex justify-between items-center mb-8">
@@ -47,14 +47,14 @@
                   class="flex items-center space-x-3 p-3 rounded-xl transition-all duration-200"
                   :class="[
                     route.path === item.path 
-                      ? 'bg-primary/10 text-primary dark:text-primary font-medium' 
+                      ? 'bg-primary text-white dark:text-white font-medium' 
                       : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                   ]"
                   @click="closeMenu"
                 >
                   <component :is="item.icon" 
                            class="h-5 w-5"
-                           :class="route.path === item.path ? 'text-primary' : ''" />
+                           :class="route.path === item.path ? 'text-white' : ''" />
                   <span>{{ t(item.label) }}</span>
                 </NuxtLink>
               </li>

@@ -1,14 +1,6 @@
 <template>
   <div class="container mx-auto px-4 py-12">
     <div class="max-w-4xl mx-auto space-y-8">
-      <!-- Header -->
-      <header class="mb-12 text-center fade-in-section">
-        <h1 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-blue-400 dark:to-primary">
-          {{ t('title') }}
-        </h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300">{{ t('meta.home.description') }}</p>
-      </header>
-
       <!-- Keyboard Shortcuts Help -->
       <div v-if="showShortcuts" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 mb-4 shadow-lg fade-in-section">
         <h2 class="text-lg font-semibold mb-2 text-primary">{{ t('shortcuts.title') }}</h2>
