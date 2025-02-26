@@ -2,6 +2,9 @@
   "name": "multilingual-counter",
   "private": true,
   "version": "1.0.0",
+  "description": "A modern, fast, and efficient multilingual character and word counter built with Nuxt 3.",
+  "author": "Motakabbir Morshed",
+  "license": "MIT",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3001",
